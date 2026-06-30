@@ -13,7 +13,7 @@ def rerank_documents(
         return []
     paires = [[requete, c["text"]] for c in candidats]
     scores = cross_encoder.predict(paires)
-    for c, s in zip(candidats, scores):
+    for c, s in zip(candidats, scores, strict=True):
         c["score_reranking"] = float(s)
     candidats_tries = sorted(
         candidats, key=lambda c: c["score_reranking"], reverse=True

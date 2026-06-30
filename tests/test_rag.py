@@ -79,7 +79,6 @@ def test_rerank_respecte_top_k(collection_faq, modele_embedding, cross_encoder):
 
 
 def test_rerank_ajoute_score_et_trie(collection_faq, modele_embedding, cross_encoder):
-    """Chaque résultat reçoit un 'score_reranking' et la liste est triée décroissante."""
     from src.rag.recherche import find_documents
     from src.rag.reranking import rerank_documents
 

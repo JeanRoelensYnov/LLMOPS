@@ -23,7 +23,8 @@ def generer_avec_rag(
 
     if not candidats:
         return {
-            "reponse": "Désolé, je ne dispose pas d'information pour répondre à cette question.",
+            "reponse": "Désolé, je ne dispose pas d'information"
+            " pour répondre à cette question.",
             "sources": [],
             "documents": [],
         }

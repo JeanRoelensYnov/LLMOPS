@@ -21,7 +21,9 @@ def find_documents(
         return []
 
     similar_embedding = []
-    for id_, texte, distance, meta in zip(ids, documents[0], distances[0], metadata[0]):
+    for id_, texte, distance, meta in zip(
+        ids, documents[0], distances[0], metadata[0], strict=True
+    ):
         similarite = 1 - distance
         if similarite >= seuil:
             similar_embedding.append(

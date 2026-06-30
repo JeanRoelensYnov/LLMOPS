@@ -6,7 +6,6 @@ from chromadb.api.models.Collection import Collection
 from chromadb.api.types import Metadata
 from sentence_transformers import SentenceTransformer
 
-
 CHEMIN_FAQ = Path("data/faq_service_client.jsonl")
 CHEMIN_CHROMA = Path("data/chroma_db")
 NOM_COLLECTION = "faq_service_client"

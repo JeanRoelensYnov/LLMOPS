@@ -19,3 +19,12 @@ repos:
     rev: v2.1.0
     hooks:
       - id: mypy
+
+  - repo: local
+    hooks:
+      - id: no-model-weights
+        name: Prevent model weights pushing
+        description: As the name suggest it this hook prevent the user from pushing any model weights related files.
+        entry: "Poids de modele detecte : ne pas committer de poids (cf .gitignore)."
+        language: fail
+        files: '\.(pt|bin|safetensors|onnx)$' # https://regex101.com/r/1vJFee/1
