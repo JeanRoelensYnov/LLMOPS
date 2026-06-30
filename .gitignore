@@ -1,0 +1,39 @@
+# --- Secrets : NE JAMAIS committer (clés Langfuse, tokens...) ---
+.env
+.env.*
+!.env.example
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+build/
+dist/
+
+# --- Caches d'outils ---
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# --- Base vectorielle ChromaDB (persistée localement, regénérable) ---
+data/chroma_db/
+
+# --- Poids de modèles (lourds, regénérables depuis le cache HF) ---
+*.pt
+*.bin
+*.safetensors
+*.onnx
+
+# --- Environnements virtuels (au cas où, même si on utilise conda) ---
+.venv/
+venv/
+env/
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
